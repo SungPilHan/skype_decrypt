@@ -1,0 +1,24 @@
+{
+  "name": "skype",
+  "productName": "Skype",
+  "version": "8.49.0.49",
+  "appVersion": "8.49",
+  "appBuild": "49",
+  "cobrand": "0",
+  "app": "s4l",
+  "environment": "",
+  "buildChannel": "production",
+  "main": "Main.js",
+  
+  
+  "license": "Copyright: Microsoft 2019",
+  "private": true,
+  "resolutions": {
+    "@paulcbetts/cld": "git+https://skype.visualstudio.com/TPS/_git/at_paulcbetts_cld#4638128",
+    "@paulcbetts/spellchecker": "git+https://skype.visualstudio.com/TPS/_git/at_paulcbetts_spellchecker#3cae1fd",
+    "electron-ssid": "git+https://skype.visualstudio.com/SCC/_git/client-shared_skypex_electron-ssid#3ca2fa9",
+    "keyboard-layout": "git+https://skype.visualstudio.com/TPS/_git/keyboard-layout#f9dfb60",
+    "keytar": "git+https://skype.visualstudio.com/TPS/_git/keytar#d60f1d7",
+    "sqlite3": "git+https://skype.visualstudio.com/TPS/_git/sqlite3#d3ea98c"
+  }
+}

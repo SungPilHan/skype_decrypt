@@ -1,0 +1,15 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const assert = require("assert");
+const electron = require("electron");
+const DomUtils_1 = require("./../security/DomUtils");
+const LanguageInit_1 = require("../localisation/LanguageInit");
+const PopupWindowApi_1 = require("./../popup-window/PopupWindowApi");
+const PreloadShared_1 = require("./../PreloadShared");
+window['domLocaliser'] = LanguageInit_1.domLocaliser;
+window['localisation'] = LanguageInit_1.language;
+window['screenSharingToolbarApi'] = new PopupWindowApi_1.PopupWindowApiImpl();
+window['electron'] = electron;
+window['assert'] = assert;
+PreloadShared_1.overrideLogger();
+DomUtils_1.disableDragAndDrop();

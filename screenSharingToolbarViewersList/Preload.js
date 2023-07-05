@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const assert = require("assert");
+const DomUtils_1 = require("./../security/DomUtils");
+const LanguageInit_1 = require("../localisation/LanguageInit");
+const PopupWindowApi_1 = require("./../popup-window/PopupWindowApi");
+const PreloadShared_1 = require("./../PreloadShared");
+window['popupWindowApi'] = new PopupWindowApi_1.PopupWindowApiImpl();
+window['assert'] = assert;
+window['localisation'] = LanguageInit_1.language;
+PreloadShared_1.overrideLogger();
+DomUtils_1.disableDragAndDrop();

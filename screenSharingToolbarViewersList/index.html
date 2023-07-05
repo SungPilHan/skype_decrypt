@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        html, body {
+            background-color: transparent;
+            font-family: "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            -webkit-user-select: none;
+        }
+        div, img {
+            outline: none;
+        }
+        #container {
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            background-color: #171717;
+            color:#ffffff;
+            padding-left: 6px;
+            padding-right: 6px;
+        }
+
+        .list-box {
+            padding: 0px;
+            height: 10px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            display: block;
+        }
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+            border-radius: 5px;
+            background-color: transparent;
+        }
+
+        ::-webkit-scrollbar-track:hover {
+            background-color:whitesmoke;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+            border-radius: 5px;
+            background-color: transparent;
+        }
+
+        body:hover ::-webkit-scrollbar-thumb {
+            background-color: darkgrey;
+            outline: 1px solid slategrey;
+        }
+
+        .viewer {
+            margin-left:5px;
+            margin-right:5px;
+            margin-top:12px; /* keep in sync with DesktopScreenSharingToolbar.ts */
+            margin-bottom:12px; /* keep in sync with DesktopScreenSharingToolbar.ts */
+            padding: 0;
+            height: 33px; /* keep in sync with DesktopScreenSharingToolbar.ts */
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        .viewer.focused {
+            outline: 2px solid orangered;
+            outline-offset: 2px;
+        }
+        .viewer-avatar {
+            padding-right: 5px;
+            width: 32px;
+            height: 32px;
+            justify-content: center;
+            flex-grow: 0;
+            flex-shrink: 0;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        .viewer-name {
+            padding-left: 5px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            flex: 1;
+            font-size: 17px;
+            align-content: start;
+            display: inline;
+        }
+        #viewer-template {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="viewer-template" class="viewer" tabindex="0">
+        <img class="viewer-avatar"></img>
+        <div class="viewer-name"></div>
+    </div>
+    <div id='container'>
+        <div id="viewers" class="list-box" aria-label="viewers with control capability" tabindex="-1" >
+        </div>
+    </div>
+</body>
+<script src="ScreenSharingToolbarViewersList.js" type="text/javascript"></script>
+
+</html>
